@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import FormContacts from '../components/FormContacts';
-import Filter from '../components/Filter';
-import ContactList from '../components/ContactsList';
+import FormContacts from '../FormContacts';
+import Filter from '../Filter';
+import ContactList from '../ContactsList';
 import s from './App.module.css';
 
 const DATA = [{ id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },

@@ -1,5 +1,5 @@
 {
-  "name": "react-homework-template",
+  "name": "goit-react-hw-03-phonebook",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://pavlinaantipova.github.io/goit-react-hw-03-phonebook/",
@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}",
+    "lint:js": "eslint src/**/*.js",
     "deploy": "git push origin main"
   },
   "eslintConfig": {
