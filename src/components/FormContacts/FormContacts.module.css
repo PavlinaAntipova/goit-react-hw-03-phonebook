@@ -1,0 +1,28 @@
+.Form {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.phone {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  line-height: 1.3em;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(154, 173, 190, 0.795);
+  box-shadow: -1px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}

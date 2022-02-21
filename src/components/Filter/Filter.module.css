@@ -1,0 +1,11 @@
+.label {
+  margin-bottom: 25px;
+}
+
+.input {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgba(130, 130, 130, 0.7);
+  border-radius: 12px;
+  box-shadow: -1px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}

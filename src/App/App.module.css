@@ -1,0 +1,14 @@
+.AppContainer {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+}
