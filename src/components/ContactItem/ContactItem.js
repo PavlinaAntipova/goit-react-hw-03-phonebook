@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import s from './ContactItem.module.css';
 
 const URL =
   'https://cdn.pixabay.com/photo/2021/02/24/20/38/cat-6047457_1280.png';
 
-function ContactItem(props) {
+function ContactItem({id, name, number, deleteItem}) {
   return (
-    <li className={s.item} key={props.id}>
+    <li className={s.item} key={id}>
       <img className={s.img} src={URL} alt="Avatar" width="60" />
       <div>
-        <p className={s.name}>{props.name}</p>
-        <p className={s.number}>{props.number}</p>
+        <p className={s.name}>{name}</p>
+        <p className={s.number}>{number}</p>
       </div>
       <button
         className={s.button}
         onClick={() => {
-          props.delete(props.id);
+          deleteItem(id);
         }}
         type="button"
       >
@@ -26,3 +28,10 @@ function ContactItem(props) {
 }
 
 export default ContactItem;
+
+ContactItem.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  deleteItem: PropTypes.func
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 import s from './FormContacts.module.css';
 
@@ -17,13 +18,8 @@ class FormContacts extends Component {
     this.setState({ name: '', number: '' });
   };
 
-  render() {
-    return (
-      <form
-        className={s.Form}
-        onSubmit={e => {
-          e.preventDefault();
-          if (
+  alertOnExistedContacts = () => {
+        if (
             this.props.contacts.find(
               contact => contact.name === this.state.name,
             )
@@ -32,6 +28,15 @@ class FormContacts extends Component {
             this.reset();
             return;
           }
+        }
+
+  render() {
+    return (
+      <form
+        className={s.Form}
+        onSubmit={e => {
+          e.preventDefault();
+          this.alertOnExistedContacts();
           this.props.updateState({ id: nanoid(), ...this.state });
           this.reset();
         }}
@@ -71,3 +76,8 @@ class FormContacts extends Component {
 }
 
 export default FormContacts;
+
+FormContacts.propTypes = {
+  updateState: PropTypes.func,
+  contacts: PropTypes.array
+}
